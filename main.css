@@ -153,7 +153,23 @@ header {
   width: 100%;
 }
 
-/* MEDIA QUERIES */
+/* CLASS SIGN-UP ************/
+.current {
+  background: #000;
+  max-width: 100%;
+  margin: 2em 0em;
+  color: #fff;
+}
+.signup {
+  max-width: 1100px;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px;
+}
+
+/* MEDIA QUERIES ************/
 
 @media (min-width: 601px) {
   .sub_heading {
@@ -180,7 +196,7 @@ header {
   .grid4 {
     grid-template-columns: auto;
   }
-  /* GRID ORDER - mobile only */
+  /* GRID ORDER - mobile only ************/
   .grid2 h2 {
     order: 1;
   }
