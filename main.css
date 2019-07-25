@@ -157,8 +157,9 @@ header {
 .current {
   background: #000;
   max-width: 100%;
-  margin: 2em 0em;
+  margin-top: 2em;
   color: #fff;
+  padding-bottom: 4em;
 }
 .signup {
   max-width: 1100px;
@@ -167,6 +168,75 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 20px;
+}
+.inner_contain {
+  padding: 3em;
+  line-height: 1.5;
+}
+.current_head {
+  font-size: 3rem;
+  text-align: center;
+}
+.current_text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* SIGN-UP image styling ************/
+.col img {
+  transition: all 0.3s ease-in-out;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.col img:hover {
+  opacity: 0.8;
+}
+
+/* SIGN-UP text styling ************/
+.col p {
+  margin-top: 1em;
+  font-size: 1.2rem;
+}
+/* SIGN-UP button styling ************/
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 0.5em 1em;
+  font-size: 1.5rem;
+  margin-top: 1em;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  border: 1px solid purple;
+  color: #e50000;
+}
+
+/* FOOTER ************/
+footer {
+  background: #333333;
+  color: #fff;
+  line-height: 2;
+  font-weight: 100;
+  padding: 2em;
+}
+footer li {
+  list-style-type: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+footer li:hover {
+  color: #e50000;
+}
+
+.innerFooter {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* MEDIA QUERIES ************/
@@ -187,14 +257,33 @@ header {
   .subHead {
     font-size: 1.2rem;
   }
+  .signup {
+    padding: 0em 3em;
+  }
 }
 
 @media (max-width: 700px) {
+  .signup {
+    grid-template-columns: auto;
+    grid-row-gap: 20px;
+  }
+
+  .innerFooter {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .grid1,
   .grid2,
   .grid3,
   .grid4 {
     grid-template-columns: auto;
+    margin-left: -20px;
   }
   /* GRID ORDER - mobile only ************/
   .grid2 h2 {
@@ -203,7 +292,6 @@ header {
   .grid2 img {
     order: 2;
   }
-
   .grid4 h2 {
     order: 1;
   }
